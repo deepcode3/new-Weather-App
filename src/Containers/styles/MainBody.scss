@@ -1,0 +1,203 @@
+@import "mixin";
+@import "variable";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  //1rem = 10px
+  font-size: 62.5%;
+}
+
+//Variables
+
+.main-headder {
+  @include size(80%, $h, relative, $t, $l);
+  // background-color:gray;
+}
+
+.imagelogo {
+  @include size($w, $h, absolute, 30px, 10px);
+}
+
+.textbox {
+  @include size(458px, 45px, absolute, 30px, $l);
+  display: flex;
+  flex-direction: row;
+  right: 20px;
+  // background-color:white;
+}
+
+.imagesearchIcon {
+  @include size(25px, 25px, relative, $t, -30px);
+  margin: auto;
+}
+
+.line {
+  @include size(100%, 1px, absolute, $t, $l);
+  border: $border-values;
+  opacity: 0.3;
+}
+
+.DatePosition {
+  @include size($w, $h, absolute, 140px, 20px);
+}
+
+.Navul {
+  @include size($w, 15px, absolute, 140px, 16px);
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  align-items: center;
+}
+
+.Navli {
+  list-style: none;
+}
+
+.Box {
+  @include size(445px, 45px, $p, $t, $l);
+  border: 1px solid hsl(180, 2%, 84%);
+  padding-left: 10px;
+  color: hsl(29, 90%, 73%);
+  background-color: rgba(255, 255, 255, 0.3);
+  ::placeholder,
+  ::-webkit-input-placeholder {
+    color: #ffffff;
+    font-family: sans-serif;
+  }
+  :-ms-input-placeholder {
+    color: red;
+  }
+}
+
+//React router NavLink
+.NavLinks {
+  @include font(1.3rem);
+  text-decoration: none;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  padding: 4px;
+  &:hover:after {
+    @include size(100%, 2px, absolute, $t, 0);
+    content: "";
+    bottom: -4px;
+    left: 0;
+    background-color: #ffd639;
+    border-radius: 2px;
+  }
+}
+
+//Home *************************
+.HomeDiv {
+  @include size($w, 630px, relative, 162px, $l);
+  display: flex;
+  flex-wrap: nowrap;
+  //background-color: gray;
+}
+
+.leftdisplay {
+  @include size(41%, 100%, $p, $t, $l);
+  display: flex;
+  text-align: center;
+  height: 100%;
+  width: 41%;
+}
+.place {
+  @include size($w, 24px, absolute, 45px, $l);
+  @include font(2rem);
+  text-align: center;
+}
+.fav {
+  position: absolute;
+  top: 70px;
+}
+.addfav {
+  @include size(94px, 15px, $p, $t, $l);
+  @include font(1.3rem);
+}
+.centerdisplay {
+  @include size(200px, 259px, $p, $t, $l);
+  display: flex;
+  margin: auto 0;
+  text-align: center;
+}
+.line {
+  @include size(100%, 1px, absolute, $t, $l);
+  border: $border-values;
+  opacity: 0.3;
+}
+.weatherFactors {
+  @include size(100%, 100px, absolute, 520px, $l);
+  display: flex;
+  justify-content: center;
+}
+
+.CenterDiv {
+  @include flex(column);
+}
+.up {
+  height: 84px;
+  width: 80px;
+  display: flex;
+}
+.middle {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //  background-color: pink;
+}
+.temp {
+  height: 75px;
+  width: 73px;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 75px;
+  display: flex;
+}
+.tempBox {
+  height: 30px;
+  width: 55px;
+  display: flex;
+}
+.valueC {
+  box-sizing: border-box;
+  height: 30px;
+  width: 28px;
+  border: $border-values;
+  border-radius: 2px 0 0 2px;
+}
+.valueF {
+  box-sizing: border-box;
+  height: 30px;
+  width: 28px;
+  border: $border-values;
+  border-radius: 2px;
+}
+.font {
+  height: 19px;
+  width: 11px;
+  font-family: Roboto;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+}
+.down {
+  height: 25px;
+  width: 100%;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: center;
+  display: flex;
+}
