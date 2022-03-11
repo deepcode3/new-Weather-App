@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+//import styled from "styled-components";
+import "../Containers/styles/Home.css";
 import WeatherFactor from "../Components/WeatherFactors";
 import WeatherIcon from "../Components/WeatherIcons";
 import icon_favorite from "../Assets/icon_favourite.png";
@@ -75,7 +76,7 @@ const Home = (props) => {
   }
 
   return (
-    <Div>
+    <div className="homediv">
       <div className="leftdisplay">
         <span className="place">
           {`${weather.name} ,${weather?.sys?.country}`},
@@ -89,7 +90,7 @@ const Home = (props) => {
         </div>
       </div>
       <div className="centerdisplay">
-        <CenterDiv>
+        <div className="CenterDiv">
           {/* <div className="up">
             <WeatherIcon weather={weather} />
           </div> */}
@@ -144,150 +145,150 @@ const Home = (props) => {
             </div>
           </div>
           <span className="down">{icon.description}</span>
-        </CenterDiv>
+        </div>
       </div>
       <hr className="line" style={{ top: "510px" }} />
       <div className="weatherFactors">
         <WeatherFactor weather={weather} />
       </div>
-    </Div>
+    </div>
   );
 };
 export default Home;
 
-const Div = styled.div`
-  position: relative;
-  height: 630px;
-  top: 162px;
-  display: flex;
-  flex-wrap: nowrap;
-  //background-color: gray;
-  .leftdisplay {
-    display: flex;
-    text-align: center;
-    height: 100%;
-    width: 41%;
-  }
-  .place {
-    position: absolute;
-    top: 45px;
-    height: 24px;
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 24px;
-    text-align: center;
-  }
-  .fav {
-    position: absolute;
-    top: 70px;
-  }
-  .addfav {
-    height: 15px;
-    width: 94px;
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 15px;
-  }
-  .centerdisplay {
-    // position: absolute;
-    // background-color: black;
-    height: 250px;
-    width: 200px;
-    display: flex;
-    margin: auto 0;
-    text-align: center;
-    //top: 120px;
-    //left: 440px;
-  }
-  .line {
-    position: absolute;
-    box-sizing: border-box;
-    height: 1px;
-    width: 100%;
-    border: 1px solid #ffffff;
-    opacity: 0.3;
-  }
-  .weatherFactors {
-    //  background-color: pink;
-    height: 100px;
-    width: 100%;
-    position: absolute;
-    top: 520px;
-    display: flex;
-    justify-content: center;
-  }
-`;
-const CenterDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .up {
-    height: 84px;
-    width: 80px;
-    display: flex;
-  }
-  .middle {
-    height: 75px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    //  background-color: pink;
-  }
-  .temp {
-    height: 75px;
-    width: 73px;
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 64px;
-    font-weight: 500;
-    letter-spacing: 0;
-    line-height: 75px;
-    display: flex;
-  }
-  .tempBox {
-    height: 30px;
-    width: 55px;
-    display: flex;
-  }
-  .valueC {
-    box-sizing: border-box;
-    height: 30px;
-    width: 28px;
-    border: 1px solid #ffffff;
-    border-radius: 2px 0 0 2px;
-  }
-  .valueF {
-    box-sizing: border-box;
-    height: 30px;
-    width: 28px;
-    border: 1px solid #ffffff;
-    border-radius: 2px;
-  }
-  .font {
-    height: 19px;
-    width: 11px;
-    font-family: Roboto;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 19px;
-  }
-  .down {
-    height: 25px;
-    width: 100%;
-    color: #ffffff;
-    font-family: Roboto;
-    font-size: 22px;
-    letter-spacing: 0;
-    line-height: 25px;
-    text-align: center;
-    display: flex;
-  }
-`;
+// const HomeDiv = styled.div`
+//   position: relative;
+//   height: 630px;
+//   top: 162px;
+//   display: flex;
+//   flex-wrap: nowrap;
+//   background-color: gray;
+//   .leftdisplay {
+//     display: flex;
+//     text-align: center;
+//     height: 100%;
+//     width: 41%;
+//   }
+//   .place {
+//     position: absolute;
+//     top: 45px;
+//     height: 24px;
+//     color: #ffffff;
+//     font-family: Roboto;
+//     font-size: 20px;
+//     font-weight: 500;
+//     letter-spacing: 0;
+//     line-height: 24px;
+//     text-align: center;
+//   }
+//   .fav {
+//     position: absolute;
+//     top: 70px;
+//   }
+//   .addfav {
+//     height: 15px;
+//     width: 94px;
+//     color: #ffffff;
+//     font-family: Roboto;
+//     font-size: 13px;
+//     font-weight: 500;
+//     letter-spacing: 0;
+//     line-height: 15px;
+//   }
+//   .centerdisplay {
+//     //     // position: absolute;
+//     //     // background-color: black;
+//     height: 250px;
+//     width: 200px;
+//     display: flex;
+//     margin: auto 0;
+//     text-align: center;
+//     //top: 120px;
+//     //left: 440px;
+//   }
+//   .line {
+//     position: absolute;
+//     box-sizing: border-box;
+//     height: 1px;
+//     width: 100%;
+//     border: 1px solid #ffffff;
+//     opacity: 0.3;
+//   }
+//   .weatherFactors {
+//     //  background-color: pink;
+//     height: 100px;
+//     width: 100%;
+//     position: absolute;
+//     top: 520px;
+//     display: flex;
+//     justify-content: center;
+//   }
+// `;
+// const CenterDiv = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   .up {
+//     height: 84px;
+//     width: 80px;
+//     display: flex;
+//   }
+//   .middle {
+//     height: 75px;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
+//     //  background-color: pink;
+//   }
+//   .temp {
+//     height: 75px;
+//     width: 73px;
+//     color: #ffffff;
+//     font-family: Roboto;
+//     font-size: 64px;
+//     font-weight: 500;
+//     letter-spacing: 0;
+//     line-height: 75px;
+//     display: flex;
+//   }
+//   .tempBox {
+//     height: 30px;
+//     width: 55px;
+//     display: flex;
+//   }
+//   .valueC {
+//     box-sizing: border-box;
+//     height: 30px;
+//     width: 28px;
+//     border: 1px solid #ffffff;
+//     border-radius: 2px 0 0 2px;
+//   }
+//   .valueF {
+//     box-sizing: border-box;
+//     height: 30px;
+//     width: 28px;
+//     border: 1px solid #ffffff;
+//     border-radius: 2px;
+//   }
+//   .font {
+//     height: 19px;
+//     width: 11px;
+//     font-family: Roboto;
+//     font-size: 16px;
+//     letter-spacing: 0;
+//     line-height: 19px;
+//   }
+//   .down {
+//     height: 25px;
+//     width: 100%;
+//     color: #ffffff;
+//     font-family: Roboto;
+//     font-size: 22px;
+//     letter-spacing: 0;
+//     line-height: 25px;
+//     text-align: center;
+//     display: flex;
+//   }
+// `;

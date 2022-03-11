@@ -11,11 +11,9 @@ html {
   font-size: 62.5%;
 }
 
-//Variables
-
 .main-headder {
   @include size(80%, $h, relative, $t, $l);
-  // background-color:gray;
+  // background-color: gray;
 }
 
 .imagelogo {
@@ -92,112 +90,3 @@ html {
 }
 
 //Home *************************
-.HomeDiv {
-  @include size($w, 630px, relative, 162px, $l);
-  display: flex;
-  flex-wrap: nowrap;
-  //background-color: gray;
-}
-
-.leftdisplay {
-  @include size(41%, 100%, $p, $t, $l);
-  display: flex;
-  text-align: center;
-  height: 100%;
-  width: 41%;
-}
-.place {
-  @include size($w, 24px, absolute, 45px, $l);
-  @include font(2rem);
-  text-align: center;
-}
-.fav {
-  position: absolute;
-  top: 70px;
-}
-.addfav {
-  @include size(94px, 15px, $p, $t, $l);
-  @include font(1.3rem);
-}
-.centerdisplay {
-  @include size(200px, 259px, $p, $t, $l);
-  display: flex;
-  margin: auto 0;
-  text-align: center;
-}
-.line {
-  @include size(100%, 1px, absolute, $t, $l);
-  border: $border-values;
-  opacity: 0.3;
-}
-.weatherFactors {
-  @include size(100%, 100px, absolute, 520px, $l);
-  display: flex;
-  justify-content: center;
-}
-
-.CenterDiv {
-  @include flex(column);
-}
-.up {
-  height: 84px;
-  width: 80px;
-  display: flex;
-}
-.middle {
-  height: 75px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  //  background-color: pink;
-}
-.temp {
-  height: 75px;
-  width: 73px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 64px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 75px;
-  display: flex;
-}
-.tempBox {
-  height: 30px;
-  width: 55px;
-  display: flex;
-}
-.valueC {
-  box-sizing: border-box;
-  height: 30px;
-  width: 28px;
-  border: $border-values;
-  border-radius: 2px 0 0 2px;
-}
-.valueF {
-  box-sizing: border-box;
-  height: 30px;
-  width: 28px;
-  border: $border-values;
-  border-radius: 2px;
-}
-.font {
-  height: 19px;
-  width: 11px;
-  font-family: Roboto;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 19px;
-}
-.down {
-  height: 25px;
-  width: 100%;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: 25px;
-  text-align: center;
-  display: flex;
-}

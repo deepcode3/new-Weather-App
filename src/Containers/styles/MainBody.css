@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -31,8 +31,8 @@ html {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   height: 45px;
   width: 458px;
   right: 20px;
@@ -50,7 +50,7 @@ html {
 .line {
   position: absolute;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 1px;
   width: 100%;
   border: 1px solid #ffffff;
@@ -71,8 +71,8 @@ html {
   list-style-type: none;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: absolute;
   top: 140px;
   left: 16px;
@@ -84,7 +84,7 @@ html {
 
 .Box {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   height: 45px;
   width: 445px;
   border: 1px solid #d5d7d7;
@@ -132,8 +132,8 @@ html {
   line-height: 15px;
   text-decoration: none;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   z-index: 1;
   position: relative;
   padding: 4px;
@@ -149,4 +149,3 @@ html {
   background-color: #ffd639;
   border-radius: 2px;
 }
-/*# sourceMappingURL=MainBody.css.map */
