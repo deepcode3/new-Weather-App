@@ -1,34 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
 .homediv {
-  position: relative;
   height: 630px;
+  position: relative;
   top: 162px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  background-color: gray;
+      flex-wrap: nowrap;
 }
 
 .leftdisplay {
+  width: 41%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  height: 100%;
-  width: 41%;
 }
 
 .place {
+  height: 24px;
   position: absolute;
   top: 45px;
-  height: 24px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 20px;
+  font-family: sans-serif;
+  font-size: 2rem;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 24px;
+  line-height: 25px;
+  color: #ffffff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -38,17 +42,19 @@
 }
 
 .addfav {
-  height: 15px;
   width: 94px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 13px;
+  height: 15px;
+  font-family: sans-serif;
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0;
-  line-height: 15px;
+  line-height: 25px;
+  color: #ffffff;
 }
 
 .centerdisplay {
+  width: 200px;
+  height: 259px;
   height: 250px;
   width: 200px;
   display: -webkit-box;
@@ -59,26 +65,24 @@
 }
 
 .line {
-  position: absolute;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 1px;
   width: 100%;
+  height: 1px;
+  position: absolute;
   border: 1px solid #ffffff;
   opacity: 0.3;
 }
 
 .weatherFactors {
-  height: 100px;
   width: 100%;
+  height: 100px;
   position: absolute;
   top: 520px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .CenterDiv {
@@ -87,19 +91,19 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .up {
-  height: 84px;
   width: 80px;
+  height: 84px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,20 +116,21 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .temp {
-  height: 75px;
   width: 73px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 64px;
+  height: 75px;
+  font-family: sans-serif;
+  font-size: 6.4rem;
   font-weight: 500;
   letter-spacing: 0;
+  line-height: 25px;
+  color: #ffffff;
   line-height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -133,6 +138,8 @@
 }
 
 .tempBox {
+  width: 55px;
+  height: 30px;
   height: 30px;
   width: 55px;
   display: -webkit-box;
@@ -141,42 +148,42 @@
 }
 
 .valueC {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 30px;
   width: 28px;
+  height: 30px;
   border: 1px solid #ffffff;
   border-radius: 2px 0 0 2px;
 }
 
 .valueF {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  height: 30px;
   width: 28px;
+  height: 30px;
   border: 1px solid #ffffff;
   border-radius: 2px;
 }
 
 .font {
-  height: 19px;
   width: 11px;
-  font-family: Roboto;
-  font-size: 16px;
+  height: 19px;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
   letter-spacing: 0;
-  line-height: 19px;
+  line-height: 25px;
+  color: #ffffff;
 }
 
 .down {
-  height: 25px;
   width: 100%;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 22px;
+  height: 25px;
+  font-family: sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
   letter-spacing: 0;
   line-height: 25px;
+  color: #ffffff;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
+/*# sourceMappingURL=Home.css.map */

@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+//import WeatherContext from "../Context/Wcontext";
 //import styled from "styled-components";
 import "../Containers/styles/Home.css";
 import WeatherFactor from "../Components/WeatherFactors";
 import WeatherIcon from "../Components/WeatherIcons";
+//images
 import icon_favorite from "../Assets/icon_favourite.png";
 import icon_favorite_Active from "../Assets/icon_favourite_Active.svg";
 import weatherIcon from "../Assets/icon_mostly_sunny.svg";
@@ -18,6 +20,7 @@ import rain_small from "../Assets/icon_rain_small.svg";
 import rain_big from "../Assets/icon_rain_big.svg";
 import thunderstrom_big from "../Assets/icon_thunderstorm_big.svg";
 import thunderstrom_small from "../Assets/icon_thunderstorm_small.svg";
+import { WeatherContext } from "../Context/Wcontext";
 
 const Home = (props) => {
   const {
@@ -29,7 +32,18 @@ const Home = (props) => {
     setAddfav,
     favcount,
     setFavcount,
-  } = props;
+  } = useContext(WeatherContext);
+
+  // const {
+  //   weather,
+  //   setUnit,
+  //   unit,
+  //   icon,
+  //   addfav,
+  //   setAddfav,
+  //   favcount,
+  //   setFavcount,
+  // } = props;
   const [favList, setFavlist] = useState([]);
 
   const handlefavClick = () => {
@@ -48,7 +62,6 @@ const Home = (props) => {
   // console.log("weather Home", weather);
   // console.log("favcount", favcount);
   //console.log("addfav", addfav);
-
   let Icon = null;
   let smallIcon = null;
   if (typeof weather.main != "undefined") {
@@ -91,9 +104,6 @@ const Home = (props) => {
       </div>
       <div className="centerdisplay">
         <div className="CenterDiv">
-          {/* <div className="up">
-            <WeatherIcon weather={weather} />
-          </div> */}
           <img src={Icon} alt="icon" className="up" />
           <div className="middle">
             <span className="temp">{parseInt(weather?.main?.temp)}</span>

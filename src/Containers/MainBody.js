@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { WeatherContext } from "../Context/Wcontext";
+//import WeatherState from "../Context/contextState";
 //import styled from "styled-components";
 import "../Containers/styles/MainBody.css";
 import logo from "../Assets/logo_web.svg";
@@ -9,6 +11,8 @@ import Date from "../Components/Date";
 import Routing from "../Router/Routing";
 import nothing from "../Assets/icon_nothing.svg";
 
+//images
+
 const MainBody = () => {
   const [city, setCity] = useState("udupi");
   const [weather, setWeather] = useState([]);
@@ -17,40 +21,44 @@ const MainBody = () => {
   const [addfav, setAddfav] = useState(false);
   const [favcount, setFavcount] = useState(0);
 
-  const [w, setW] = useState([]);
-  const count = JSON.parse(localStorage.getItem("FavCount"));
+  const [fav, setFav] = useState([]);
+
+  const [rec, setRec] = useState([]);
+
   const fetchWeather = async () => {
     try {
       const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${unit}&appid=2c4838d1d400345df0010c064351315b`
       );
-
       setWeather(res.data);
       setIcon(res.data.weather[0]);
       setAddfav(false);
-
-      // console.log("main", res.data.weather[0].main);
     } catch (err) {
       console.log(err);
     }
   };
+
   useEffect(() => {
     fetchWeather();
   }, [unit]);
 
   useEffect(() => {
     if (weather) {
-      setW([...w, weather]);
+      setFav([...fav, weather]);
     }
   }, [favcount]);
 
-  localStorage.setItem("Fav", JSON.stringify(w));
+  useEffect(() => {
+    if (weather) {
+      setRec([...rec, weather]);
+    }
+  }, [weather]);
 
-  console.log("w", w);
+  localStorage.setItem("Fav", JSON.stringify(fav));
+  localStorage.setItem("Rec", JSON.stringify(rec));
 
-  console.log("weather Type", weather);
-
-  //console.log(" fetchData", weather);
+  console.log("fav", fav);
+  console.log("rec", rec);
 
   return (
     <div className="main-headder">
@@ -92,18 +100,34 @@ const MainBody = () => {
         <img src={nothing} alt="nothing" />
       ) : (
         <div>
-          <Routing
-            weather={weather}
-            setWeather={setWeather}
-            setUnit={setUnit}
-            unit={unit}
-            icon={icon}
-            addfav={addfav}
-            setAddfav={setAddfav}
-            favcount={favcount}
-            setFavcount={setFavcount}
-            w={w}
-          />
+          <WeatherContext.Provider
+            value={{
+              weather,
+              setUnit,
+              unit,
+              icon,
+              addfav,
+              setAddfav,
+              favcount,
+              setFavcount,
+              setCity,
+              weather,
+              setWeather,
+            }}
+          >
+            <Routing
+            // weather={weather}
+            // setWeather={setWeather}
+            // setUnit={setUnit}
+            // unit={unit}
+            // icon={icon}
+            // addfav={addfav}
+            // setAddfav={setAddfav}
+            // favcount={favcount}
+            // setFavcount={setFavcount}
+            // setCity={setCity}
+            />
+          </WeatherContext.Provider>
         </div>
       )}
     </div>

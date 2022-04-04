@@ -1,0 +1,62 @@
+@import "../../Partial/mixin";
+@import "../../Partial/variable";
+
+html {
+  //1rem = 10px
+  font-size: 62.5%;
+}
+
+.FavDiv {
+  @include size(null, 410px, relative, 162px, null);
+  display: flex;
+  flex-direction: column;
+}
+.headding {
+  @include size(100%, 70px, null, null, null);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favcity {
+  @include size(null, 15px, null, null, null);
+  @include font(1.3rem);
+  padding: 4px;
+}
+.favBox {
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.placename {
+  @include size(26%, 19px, null, null, null);
+  @include font(1.6rem);
+  display: flex;
+}
+.wicon {
+  @include size(36px, 38px, null, null, null);
+
+  display: flex;
+}
+.temp {
+  @include size(70px, 38px, null, null, null);
+  display: flex;
+  align-items: center;
+}
+.val {
+  @include size(37px, null, null, null, null);
+  @include font(3.2rem);
+  display: flex;
+}
+.unit {
+  @include font(1.7rem);
+  display: flex;
+}
+.nothing {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

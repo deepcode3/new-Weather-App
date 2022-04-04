@@ -1,5 +1,5 @@
-@import "mixin";
-@import "variable";
+@import "../../Partial/mixin";
+@import "../../Partial//variable";
 
 * {
   margin: 0;
@@ -12,16 +12,15 @@ html {
 }
 
 .main-headder {
-  @include size(80%, $h, relative, $t, $l);
-  // background-color: gray;
+  @include size(80%, null, relative, null, null);
 }
 
 .imagelogo {
-  @include size($w, $h, absolute, 30px, 10px);
+  @include size(null, null, absolute, 30px, 10px);
 }
 
 .textbox {
-  @include size(458px, 45px, absolute, 30px, $l);
+  @include size(458px, 45px, absolute, 30px, null);
   display: flex;
   flex-direction: row;
   right: 20px;
@@ -29,22 +28,23 @@ html {
 }
 
 .imagesearchIcon {
-  @include size(25px, 25px, relative, $t, -30px);
+  @include size(25px, 25px, relative, null, -30px);
   margin: auto;
 }
 
 .line {
-  @include size(100%, 1px, absolute, $t, $l);
+  @include size(100%, 1px, absolute, null, null);
   border: $border-values;
   opacity: 0.3;
 }
 
 .DatePosition {
-  @include size($w, $h, absolute, 140px, 20px);
+  @include size(null, null, absolute, 140px, null);
+  right: 20px;
 }
 
 .Navul {
-  @include size($w, 15px, absolute, 140px, 16px);
+  @include size(null, 15px, absolute, 140px, 16px);
   display: flex;
   list-style-type: none;
   text-align: center;
@@ -56,18 +56,19 @@ html {
 }
 
 .Box {
-  @include size(445px, 45px, $p, $t, $l);
+  @include size(445px, 45px, null, null, null);
   border: 1px solid hsl(180, 2%, 84%);
   padding-left: 10px;
-  color: hsl(29, 90%, 73%);
-  background-color: rgba(255, 255, 255, 0.3);
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
   ::placeholder,
   ::-webkit-input-placeholder {
     color: #ffffff;
     font-family: sans-serif;
   }
   :-ms-input-placeholder {
-    color: red;
+    color: #ffffff;
   }
 }
 
@@ -80,9 +81,9 @@ html {
   position: relative;
   padding: 4px;
   &:hover:after {
-    @include size(100%, 2px, absolute, $t, 0);
+    @include size(100%, 2.5px, absolute, null, 0);
     content: "";
-    bottom: -4px;
+    bottom: 1px;
     left: 0;
     background-color: #ffd639;
     border-radius: 2px;

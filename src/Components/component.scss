@@ -1,0 +1,35 @@
+@import "../Partial/mixin";
+@import "../Partial/variable";
+
+html {
+  //1rem = 10px
+  font-size: 62.5%;
+}
+
+//Weather factors
+.Weatherul {
+  @include size(100%, 15px, absolute, 20px, null);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+  // background-color: red;
+}
+.factorli {
+  list-style: none;
+  width: 100px;
+  // background-color: brown;
+  position: relative;
+  margin-right: 10px;
+}
+.variable {
+  @include size(null, 18px, absolute, null, null);
+  @include font(1.5rem);
+  //background-color: green;
+}
+.value {
+  @include size(null, 25px, absolute, 20px, null);
+  @include font(2.2rem);
+}
+
+//

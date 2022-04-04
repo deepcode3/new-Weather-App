@@ -1,24 +1,22 @@
-@import "mixin";
-@import "variable";
+@import "../../Partial/mixin";
+@import "../../Partial/variable";
 
 html {
   font-size: 62.5%;
 }
 
 .homediv {
-  @include size($w, 630px, relative, 162px, $l);
+  @include size(null, 630px, relative, 162px, null);
   display: flex;
   flex-wrap: nowrap;
-  background-color: gray;
 }
 .leftdisplay {
-  @include size(41%, 100%, $p, $t, $l);
+  @include size(41%, 100%, null, null, null);
   display: flex;
   text-align: center;
-  background-color: red;
 }
 .place {
-  @include size($w, 24px, absolute, 45px, $l);
+  @include size(null, 24px, absolute, 45px, null);
   @include font(2rem);
   color: #ffffff;
   text-align: center;
@@ -28,53 +26,33 @@ html {
   top: 70px;
 }
 .addfav {
-  height: 15px;
-  width: 94px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 0;
-  line-height: 15px;
+  @include size(94px, 15px, null, null, null);
+  @include font(1.3rem);
 }
 .centerdisplay {
-  // position: absolute;
-  // background-color: black;
+  @include size(200px, 259px, null, null, null);
   height: 250px;
   width: 200px;
   display: flex;
   margin: auto 0;
   text-align: center;
-  //top: 120px;
-  //left: 440px;
 }
 .line {
-  position: absolute;
-  box-sizing: border-box;
-  height: 1px;
-  width: 100%;
-  border: 1px solid #ffffff;
+  @include size(100%, 1px, absolute, null, null);
+  border: $border-values;
   opacity: 0.3;
 }
 .weatherFactors {
-  //  background-color: pink;
-  height: 100px;
-  width: 100%;
-  position: absolute;
-  top: 520px;
+  @include size(100%, 100px, absolute, 520px, null);
   display: flex;
   justify-content: center;
 }
 
 .CenterDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex(column);
 }
 .up {
-  height: 84px;
-  width: 80px;
+  @include size(80px, 84px, null, null, null);
   display: flex;
 }
 .middle {
@@ -86,154 +64,34 @@ html {
   //  background-color: pink;
 }
 .temp {
-  height: 75px;
-  width: 73px;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 64px;
-  font-weight: 500;
-  letter-spacing: 0;
+  @include size(73px, 75px, null, null, null);
+  @include font(6.4rem);
   line-height: 75px;
   display: flex;
 }
 .tempBox {
+  @include size(55px, 30px, null, null, null);
   height: 30px;
   width: 55px;
   display: flex;
 }
 .valueC {
-  box-sizing: border-box;
-  height: 30px;
-  width: 28px;
-  border: 1px solid #ffffff;
+  @include size(28px, 30px, null, null, null);
+  border: $border-values;
   border-radius: 2px 0 0 2px;
 }
 .valueF {
-  box-sizing: border-box;
-  height: 30px;
-  width: 28px;
-  border: 1px solid #ffffff;
+  @include size(28px, 30px, null, null, null);
+  border: $border-values;
   border-radius: 2px;
 }
 .font {
-  height: 19px;
-  width: 11px;
-  font-family: Roboto;
-  font-size: 16px;
-  letter-spacing: 0;
-  line-height: 19px;
+  @include size(11px, 19px, null, null, null);
+  @include font(1.6rem);
 }
 .down {
-  height: 25px;
-  width: 100%;
-  color: #ffffff;
-  font-family: Roboto;
-  font-size: 22px;
-  letter-spacing: 0;
-  line-height: 25px;
+  @include size(100%, 25px, null, null, null);
+  @include font(2.2rem);
   text-align: center;
   display: flex;
 }
-
-//**
-// @import "mixin";
-// @import "variable";
-
-// html {
-//   font-size: 62.5%;
-// }
-
-// .homeDiv {
-//   // @include size($w, 630px, relative, 162px, $l);
-//   height: 630px;
-//   top: 162px;
-//   position: relative;
-//   display: flex;
-//   flex-wrap: nowrap;
-//   background-color: red;
-// }
-
-// .leftdisplay {
-// // @include size(41%, 100%, $p, $t, $l);
-//   display: flex;
-//   text-align: center;
-//   height: 100%;
-//   width: 41%;
-// }
-// .place {
-// //  @include size($w, 24px, absolute, 45px, $l);
-//  // @include font(2rem);
-//   text-align: center;
-// }
-// .fav {
-//   position: absolute;
-//   top: 70px;
-// }
-// .addfav {
-//  // @include size(94px, 15px, $p, $t, $l);
-//  // @include font(1.3rem);
-// }
-// .centerdisplay {
-//  // @include size(200px, 259px, $p, $t, $l);
-//   display: flex;
-//   margin: auto 0;
-//   text-align: center;
-// }
-// .line {
-//  // @include size(100%, 1px, absolute, $t, $l);
-//   border: $border-values;
-//   opacity: 0.3;
-// }
-// .weatherFactors {
-//  // @include size(100%, 100px, absolute, 520px, $l);
-//   display: flex;
-//   justify-content: center;
-// }
-
-// .CenterDiv {
-//   @include flex(column);
-// }
-// .up {
-//   @include size(80px, 84px, $p, $t, $l);
-//   display: flex;
-// }
-// .middle {
-//   height: 75px;
-//   width: 100%;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   //  background-color: pink;
-// }
-// .temp {
-//   @include size(73px, 75px, $p, $t, $l);
-//   @include font(6.4rem);
-//   line-height: 75px;
-//   display: flex;
-// }
-// .tempBox {
-//   @include size(55px, 30px, $p, $t, $l);
-//   height: 30px;
-//   width: 55px;
-//   display: flex;
-// }
-// .valueC {
-//   @include size(28px, 30px, $p, $t, $l);
-//   border: $border-values;
-//   border-radius: 2px 0 0 2px;
-// }
-// .valueF {
-//   @include size(28px, 30px, $p, $t, $l);
-//   border: $border-values;
-//   border-radius: 2px;
-// }
-// .font {
-//   @include size(11px, 19px, $p, $t, $l);
-//   @include font(1.6rem);
-// }
-// .down {
-//   @include size(100%, 25px, $p, $t, $l);
-//   @include font(2.2rem);
-//   text-align: center;
-//   display: flex;
-// }

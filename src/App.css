@@ -9,13 +9,10 @@ html {
 }
 
 .App {
-height: 800px;
-width: 100vw;
-display: flex;
-justify-content: center;
-background: linear-gradient(30deg,  #4206e9, #4d23c0, #743fa6,#bb42ab);
-/*background-color: rgba(136,81,204,0.68);*/
+  height: 800px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(30deg, #4206e9, #4d23c0, #743fa6, #bb42ab);
+  /*background-color: rgba(136,81,204,0.68);*/
 }
-
-
-
